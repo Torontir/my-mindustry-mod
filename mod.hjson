@@ -1,7 +1,0 @@
-{
-  name: "fixed-example-mod-items"
-  displayName: "Fixed Example Mod (Items)"
-  author: "Denis"
-  description: "Fixed mod with liquids, blocks, and items. No core, no units."
-  minGameVersion: 146
-}
