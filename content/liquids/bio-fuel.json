@@ -1,0 +1,12 @@
+{
+ "type": "liquids",
+ "name": "bio-fuel",
+ "description": "A combustible liquid processed from organic matter. While less energy-dense than pure oil, its sustainable nature and stable combustion make it an ideal secondary fuel source for power generation and light propulsion systems.",
+ "color": "336600",
+ "flammability": 0.6,
+ "temperature": 0,
+ "heatCapacity": 0.2,
+ "viscosity": 0.4,
+ "explosiveness": 0.1
+}
+

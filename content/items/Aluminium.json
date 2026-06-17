@@ -1,0 +1,12 @@
+{
+  "type": "material",
+  "name": "Aluminium",
+  "description": "A lightweight, corrosion-resistant metal. Its exceptional strength-to-weight ratio makes it indispensable for advanced aerospace engineering and rapid-response unit chassis.",
+  "color": "9ab1b1",
+  "flammability": 0f,
+  "explosiveness": 0f,
+  "radioactivity": 0f,
+  "hardness": 1,
+  "cost": 0.2f,
+  "alwaysUnlocked": false
+}

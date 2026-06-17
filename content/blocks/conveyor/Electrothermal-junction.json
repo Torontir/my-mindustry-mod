@@ -1,0 +1,21 @@
+{
+  "type": "junction",
+  "name": "Electrothermal-Junction",
+  "health": 250,
+  "size": 1,
+  "speed": 20.0,
+  "itemCapacity": 30,
+  "hasPower": true,
+  "conductivePower": true,
+  "consumes": {
+    "power": 0.1
+  },
+  "requirements": [
+    { "item": "Electrothermic-alloy", "amount": 2 },
+    { "item": "Carbon", "amount": 2 },
+    { "item": "Aluminium", "amount": 4 }
+  ],
+  "category": "distribution",
+  "research": "electrothermal-conveyor",
+  "updateEffect": "electricCharge"
+}

@@ -1,0 +1,135 @@
+{
+  "type": "legs",
+  "name": "Event Horizon",
+  "description": "A heavy tactical walker. Features dual high-voltage cannons for general combat and a specialized kinetic repulsor dedicated to clearing the skies.",
+  "research": "sniper-spider-t3",
+  
+  "health": 4200,
+  "armor": 6,
+  "speed": 0.42,
+  "rotateSpeed": 1.4,
+  "hitSize": 36,
+  
+  "legCount": 6,
+  "legLength": 42,
+  "legWidth": 6,
+  "legBaseOffset": 2,
+  "legExtension": -5,
+  "legPairOffset": 3,
+  "legMoveLinearScl": 0.8,
+  "lockLegBase": true,
+  "legSpeed": 0.1,
+
+  "weapons": [
+    {
+      "name": "bolt-cannon",
+      "x": 18,
+      "y": 0,
+      "reload": 55,
+      "recoil": 5,
+      "shake": 3,
+      "mirror": true,
+      "rotate": true,
+      "rotateSpeed": 1.6,
+      "rotationLimit": 45,
+      "shootSound": "laser",
+      "shootEffect": "lancerShoot",
+      "smokeEffect": "none",
+      
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 450,
+        "speed": 10,
+        "lifetime": 45,
+        "width": 12,
+        "height": 30,
+        "frontColor": "ffffff",
+        "backColor": "4d94ff",
+        "trailColor": "4d94ff",
+        "trailWidth": 3,
+        "trailLength": 20,
+        "lightning": 3,
+        "lightningLength": 8,
+        "lightningDamage": 30,
+        "lightningColor": "4d94ff",
+        
+        "hitEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "sides": 4,
+              "colorFrom": "4d94ff",
+              "colorTo": "4d94ff00",
+              "sizeTo": 35,
+              "lifetime": 15,
+              "strokeFrom": 3
+            },
+            {
+              "type": "ParticleEffect",
+              "line": true,
+              "particles": 4,
+              "lifetime": 12,
+              "length": 15,
+              "strokeFrom": 2,
+              "colorFrom": "4d94ff",
+              "colorTo": "ffffff"
+            }
+          ]
+        },
+        "despawnEffect": "none",
+        "shootEffect": "shootBigColor",
+        "incendChance": 0,
+        "incendAmount": 0,
+        "status": "electrified",
+        "statusDuration": 240,
+        "splashDamage": 140,
+        "splashDamageRadius": 38
+      }
+    },
+    {
+      "name": "kinetic-support-beam",
+      "x": 0,
+      "y": -5,
+      "reload": 15,
+      "mirror": false,
+      "rotate": true,
+      "rotateSpeed": 25,
+      
+      "autoTarget": true,
+      "controllable": false,
+      "aiControllable": true,
+      
+      "targetAir": true,
+      "targetGround": false,
+      
+      "shootSound": "sap",
+      "continuous": false,
+      "shake": 1,
+      
+      "bullet": {
+        "type": "ContinuousLaserBulletType",
+        "damage": 0.5,
+        "length": 240,
+        "width": 4.5,
+        "oscMag": 1.2,
+        "oscScl": 0.8,
+        "colors": ["4d94ff55", "4d94ffff", "ffffff"],
+        
+        "knockback": 12.0,
+        "status": "slow",
+        "statusDuration": 150,
+        
+        "collidesGround": false,
+        "collidesAir": true,
+        
+        "incendChance": 0,
+        "incendAmount": 0,
+        "shootEffect": "shootHeal",
+        "smokeEffect": "lightningShoot",
+        "hitEffect": "hitLancer",
+        "hitSpacing": 8
+      }
+    }
+  ]
+}

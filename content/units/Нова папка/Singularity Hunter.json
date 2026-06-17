@@ -1,0 +1,172 @@
+{
+  "type": "legs",
+  "name": "Singularity Hunter",
+  "description": "The ultimate T5 bio-sniper. Amplified energy vortex cannon.",
+  "hitSize": 40,
+  "health": 11500,
+  "armor": 10,
+  "speed": 0.48,
+  "rotateSpeed": 1.9,
+  "legCount": 6,
+  "legLength": 45,
+  "legPairOffset": 3,
+  "legMoveSpace": 1.1,
+  "legBaseOffset": 10,
+  "shadowElevation": 0.8,
+  "groundLayer": 75,
+  "canHeal": true,
+  "deathExplosionEffect": "massiveExplosion",
+  "loopSound": "hum",
+  "loopSoundVolume": 0.05,
+  "abilities": [
+    {
+      "type": "RepairFieldAbility",
+      "amount": 20,
+      "reload": 60,
+      "range": 0
+    },
+    {
+      "type": "LiquidRegenAbility",
+      "liquid": "amplified-energy",
+      "amount": 0.1,
+      "range": 10
+    }
+  ],
+  "weapons": [
+    {
+      "name": "vortex-sniper",
+      "x": 0,
+      "y": 0,
+      "mirror": false,
+      "rotate": false,
+      "reload": 600,
+      "shootY": 22,
+      "shake": 18,
+      "recoil": 0,
+      "shootSound": "railgun",
+      "chargeSound": "lasercharge2",
+      "shootStatus": "unmoving",
+      "shootStatusDuration": 210,
+      "shoot": {
+        "firstShotDelay": 150
+      },
+      "chargeEffectRelative": true,
+      "parts": [
+        {
+          "type": "RegionPart",
+          "suffix": "-base",
+          "mirror": false,
+          "outline": true
+        },
+        {
+          "type": "RegionPart",
+          "suffix": "-barrel",
+          "progress": "recoil",
+          "moveY": -10,
+          "under": true,
+          "mirror": false,
+          "outline": true
+        }
+      ],
+      "bullet": {
+        "type": "BasicBulletType",
+        "sprite": "large-orb",
+        "damage": 2800,
+        "speed": 9,
+        "lifetime": 65,
+        "width": 24,
+        "height": 24,
+        "backColor": "84b3f4",
+        "frontColor": "ffffff",
+        "shrinkX": 0,
+        "shrinkY": 0,
+        "loopSound": "sap",
+        "loopSoundVolume": 1.2,
+        "trailEffect": "bubble",
+        "trailInterval": 2,
+        "trailColor": "84b3f4",
+        "chargeEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "lifetime": 150,
+              "sizeFrom": 60,
+              "sizeTo": 0,
+              "colorFrom": "84b3f4",
+              "strokeFrom": 4
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 20,
+              "length": -50,
+              "lifetime": 150,
+              "colorFrom": "84b3f4",
+              "interp": "pow5In"
+            }
+          ]
+        },
+        "knockback": -18.0,
+        "pierce": true,
+        "pierceCap": 5,
+        "fragBullets": 1,
+        "fragVelocityMin": 0,
+        "fragBullet": {
+          "type": "ArtilleryBulletType",
+          "damage": 1500,
+          "splashDamage": 1500,
+          "splashDamageRadius": 90,
+          "lifetime": 1,
+          "speed": 0,
+          "hitSound": "corexplode",
+          "hitEffect": {
+            "type": "MultiEffect",
+            "effects": [
+              {
+                "type": "WaveEffect",
+                "lifetime": 70,
+                "sizeTo": 150,
+                "colorFrom": "84b3f4",
+                "strokeFrom": 10
+              },
+              {
+                "type": "ParticleEffect",
+                "particles": 40,
+                "length": 100,
+                "lifetime": 80,
+                "line": true,
+                "colorFrom": "ffffff",
+                "colorTo": "84b3f400"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "stinger-mount",
+      "x": 16,
+      "y": -4,
+      "mirror": true,
+      "rotate": true,
+      "reload": 25,
+      "recoil": 2,
+      "shootSound": "sap",
+      "shootSoundVolume": 0.4,
+      "bullet": {
+        "type": "BasicBulletType",
+        "damage": 90,
+        "speed": 7,
+        "lifetime": 35,
+        "width": 4,
+        "height": 32,
+        "frontColor": "ffffff",
+        "backColor": "84b3f4",
+        "trailColor": "84b3f4",
+        "trailWidth": 2,
+        "trailLength": 12,
+        "homingPower": 0.05
+      }
+    }
+  ]
+}

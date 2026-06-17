@@ -1,0 +1,24 @@
+{
+  "type": "liquidJunction",
+  "name": "electrothermal-liquid-junction",
+  "description": "Allows liquids to cross paths efficiently while transferring power.",
+  "health": 260,
+
+  "liquidCapacity": 20,
+
+  "hasPower": true,
+  "conductivePower": true,
+  "consumes": {
+    "power": 0.1
+  },
+
+  "requirements": [
+    { "item": "Electrothermic-alloy", "amount": 2 },
+    { "item": "Carbon", "amount": 2 },
+    { "item": "Aluminium", "amount": 2 },
+    { "item": "metaglass", "amount": 4 }
+  ],
+
+  "category": "liquid",
+  "research": "liquid-junction"
+}

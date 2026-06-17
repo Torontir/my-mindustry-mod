@@ -1,0 +1,50 @@
+{
+  "type": "GenericCrafter",
+  "name": "electrothermic-smelter",
+  "description": "Потужний електротермічний завод, що розплавляє метали за допомогою високої температури й електричних розрядів.",
+  "health": 1200,
+  "size": 3,
+
+  "requirements": [
+    { "item": "titanium", "amount": 120 },
+    { "item": "Aluminium", "amount": 155 },
+    { "item": "silicon", "amount": 85 },
+    { "item": "plastanium", "amount": 35 }
+  ],
+
+  "research": "plastanium-compressor",
+
+  "hasPower": true,
+  "hasItems": true,
+  "hasLiquids": true,
+
+  "craftTime": 50,
+
+  "consumes": {
+    "power": 5.6,
+    "items": [
+      { "item": "Aluminium", "amount": 2 },
+      { "item": "graphite", "amount": 2 }
+    ],
+    "liquid": {
+      "liquid": "slag",
+      "amount": 0.1
+    }
+  },
+
+  "craftEffect": "blastsmoke",
+  "updateEffect": "smeltsmoke",
+
+  "category": "crafting",
+
+  "idleSound": "pulse",
+  "idleSoundVolume": 0.45,
+
+  "itemCapacity": 10,
+  "liquidCapacity": 20,
+
+  "outputItem": {
+    "item": "Electrothermic-alloy",
+    "amount": 1
+  }
+}

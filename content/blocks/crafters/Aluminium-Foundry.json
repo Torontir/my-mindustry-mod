@@ -1,0 +1,87 @@
+{
+  "type": "GenericCrafter",
+  "name": "Aluminium-Foundry",
+  "description": "A heavy-duty industrial foundry for mass aluminum production. Uses a high-intensity electrolysis process requiring silicon as a catalyst, along with cryofluid for extreme cooling.",
+  "size": 4,
+  "health": 1850,
+  "hasPower": true,
+  "hasItems": true,
+  "hasLiquids": true,
+  "craftTime": 50,
+  "itemCapacity": 80,
+  "liquidCapacity": 100,
+  "consumes": {
+    "power": 10.0,
+    "items": {
+      "items": [
+        { "item": "titanium", "amount": 2 },
+        { "item": "lead", "amount": 8 },
+        { "item": "silicon", "amount": 3 }
+      ]
+    },
+    "liquid": {
+      "liquid": "cryofluid",
+      "amount": 0.1
+    }
+  },
+  "outputItem": { "item": "Aluminium", "amount": 14 },
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawLiquidTile",
+        "drawLiquid": "cryofluid",
+        "padding": 6,
+        "color": "d0d0e8ff" 
+      },
+      {
+        "type": "DrawDefault"
+      },
+      {
+        "type": "DrawGradientShape",
+        "shape": "circle",
+        "radius": 28,
+        "colorFrom": "cbd5e0ff",
+        "colorTo": "cbd5e000",
+        "condition": "warmup"
+      },
+      {
+        "type": "DrawGlow",
+        "color": "e2e8f0ff",
+        "radius": 26,
+        "intensity": 0.8,
+        "condition": "warmup"
+      }
+    ]
+  },
+  "warmupSpeed": 0.015,
+  "craftEffect": {
+    "type": "MultiEffect",
+    "effects": [
+      "smeltsmoke",
+      {
+        "type": "WaveEffect",
+        "colorFrom": "e2e8f0ff",
+        "colorTo": "cbd5e000",
+        "sizeTo": 42,
+        "lifetime": 35
+      }
+    ]
+  },
+  "updateEffect": "freezing",
+  "updateEffectChance": 0.05,
+  "ambientSound": "techloop",
+  "ambientSoundVolume": 0.15,
+  "requirements": [
+    { "item": "titanium", "amount": 450 },
+    { "item": "thorium", "amount": 200 },
+    { "item": "silicon", "amount": 350 },
+    { "item": "Aluminium", "amount": 150 }
+  ],
+  "category": "crafting",
+  "research": "Aluminium-electrolyzer"
+}

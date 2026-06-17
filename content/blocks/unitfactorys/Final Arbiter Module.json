@@ -1,0 +1,73 @@
+{
+  "type": "Reconstructor",
+  "name": "Final Arbiter Module",
+  "description": "The ultimate assembly stage. Integrates Carbon-reinforced plating and unstable core components to convert Piercer units into the devastating Verdict walkers.",
+  "health": 1350,
+  "size": 5,
+  "constructTime": 3600, 
+
+  "upgrades": [
+    ["Piercer", "Verdict"]
+  ],
+
+  "craftEffect": {
+    "type": "MultiEffect",
+    "effects": [
+      {
+        "type": "ParticleEffect",
+        "line": true,
+        "particles": 25,
+        "length": 60,
+        "lifetime": 70,
+        "color": "ff3333",
+        "strokeFrom": 2,
+        "strokeTo": 0
+      },
+      {
+        "type": "WaveEffect",
+        "sizeFrom": 0,
+        "sizeTo": 35,
+        "lifetime": 120,
+        "color": "ff3333",
+        "strokeFrom": 4,
+        "strokeTo": 0
+      },
+      {
+        "type": "LightningEffect",
+        "lightningColor": "ff3333",
+        "lightningLength": 25,
+        "particles": 1,
+        "lifetime": 25
+      }
+    ]
+  },
+
+  "consumes": {
+    "power": 9.0, 
+    "items": [
+     { "item": "silicon", "amount": 400 },
+     { "item": "thorium", "amount": 300 },
+     { "item": "Carbon", "amount": 120 }
+    ]
+  },
+
+  "requirements": [
+    { "item": "copper", "amount": 250 },
+    { "item": "silicon", "amount": 160 },
+    { "item": "Aluminium", "amount": 100 },
+    { "item": "Carbon", "amount": 80 },
+    { "item": "thorium", "amount": 60 }	
+	
+  ],
+  
+  "category": "units",
+  
+  "research": {
+    "parent": "Advanced Assembly Moduleцц",
+    "requirements": [
+      { "item": "copper", "amount": 5000 },
+      { "item": "silicon", "amount": 5000 },
+      { "item": "Carbon", "amount": 2000 }
+    ]
+  }
+}

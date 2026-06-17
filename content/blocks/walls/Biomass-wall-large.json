@@ -1,0 +1,33 @@
+{
+  "type": "ForceProjector",
+  "name": "Biomass-wall-large",
+  "health": 880,
+  "size": 2,
+  "radius": 18,
+  "sides": 4,
+  "shieldHealth": 1400,
+  "cooldownNormal": 2.0,
+  "hasPower": true,
+  "outputsPower": true,
+  "consumes": {
+    "power": 2.0
+  },
+  "requirements": [
+    { "item": "Bio-mass", "amount": 24 },
+    { "item": "Aluminium", "amount": 8 }
+  ],
+  "category": "defense",
+  "research": "Biomass-wall",
+  "shieldColor": "33ff33",
+  "baseColor": "1a8a1a",
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      { "type": "DrawDefault" },
+      {
+        "type": "DrawShield",
+        "color": "33ff33"
+      }
+    ]
+  }
+}
