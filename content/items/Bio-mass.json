@@ -1,9 +1,0 @@
-{
-  "type": "Item",
-  "name": "Bio-mass",
-  "description": "A compacted organic mixture made from spores, coal, and water. Used as a base for advanced bio-fuels.",
-  "color": "6faa3d",
-  "flammability": 0.8,
-  "explosiveness": 0.2,
-  "heatCapacity": 0.8
-}
