@@ -1,0 +1,79 @@
+{
+  "type": "MendProjector",
+  "name": "Reinforced Biomass Repairer",
+  "size": 3,
+  "health": 2400,
+  "category": "effect",
+  "research": "mend-projector",
+  "requirements": [
+    { "item": "Bio-mass", "amount": 125 },
+    { "item": "plastanium", "amount": 35 },
+    { "item": "Aluminium", "amount": 150 },
+    { "item": "silicon", "amount": 100 }
+  ],
+  "hasPower": true,
+  "hasItems": true,
+  "itemCapacity": 10,
+
+  "consumes": {
+    "power": 4.5,
+    "items": {
+      "items": [
+        { "item": "phase-fabric", "amount": 1 }
+      ],
+      "optional": true
+    }
+  },
+
+  "reload": 100, // Швидкість відновлення стала ще меншою (пауза 1.66 сек)
+  "range": 160,
+  "healPercent": 10,
+
+  "itemConsumer": "phase-fabric",
+  "phaseBoost": 10,
+  "phaseRangeBoost": 60,
+  "useTime": 420, // Споживання збільшено (тепер 1 фаза приблизно на 7 секунд)
+
+  "baseColor": "84f491",
+  "phaseColor": "ffd37f",
+
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawDefault"
+      },
+      {
+        "type": "DrawCondition",
+        "condition": "status",
+        "drawers": [
+          {
+            "type": "DrawShape",
+            "layer": 110,
+            "shape": "circle",
+            "radius": 11,
+            "color": "84f491",
+            "useFill": true
+          },
+          {
+            "type": "DrawPulseShape",
+            "layer": 110.1,
+            "shape": "circle",
+            "color": "84f491",
+            "radius": 16,
+            "stroke": 2.2,
+            "interval": 45
+          },
+          {
+            "type": "DrawParticles",
+            "color": "84f491",
+            "particles": 12,
+            "lifetime": 70,
+            "size": 2.5,
+            "radius": 15
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "type": "Drill",
+  "name": "Colossal Rotary Drill",
+  "description": "A massive 5x5 industrial drill. [scarlet]Requires Amplified Energy to function.[] Can be further boosted with water for extreme speeds.",
+  "size": 5,
+  "health": 3600,
+  "tier": 5, 
+  
+  "drillTime": 160,     // Зменшено з 220 (чим менше число, тим швидше видобуток)
+  "rotateSpeed": 9,      // Трохи збільшив швидкість обертання, щоб візуал встигав за швидкістю
+  "itemCapacity": 300,
+  "liquidCapacity": 20,
+  
+  "drillSound": "drill",
+  "drillSoundVolume": 0.8,
+  "ambientSound": "hum",
+  "ambientSoundVolume": 0.1,
+  "shake": 4,
+
+  "updateEffect": "drillSteam", 
+  "updateEffectChance": 0.04, 
+  
+  "drillEffect": {
+    "type": "MultiEffect",
+    "effects": [
+      "mineHuge",             
+      "pulverize",            
+      {
+        "type": "ParticleEffect", 
+        "line": true,
+        "particles": 3,       
+        "length": 25,
+        "colorFrom": "7a1f18",
+        "colorTo": "7a1f1800"
+      },
+      {
+        "type": "ParticleEffect",
+        "line": true,
+        "particles": 10,      
+        "length": 45,         
+        "strokeFrom": 1.5,    
+        "strokeTo": 0,        
+        "colorFrom": "ffdd55",
+        "colorTo": "ffaa00"   
+      }
+    ]
+  },
+
+  "liquidBoostIntensity": 1.6, 
+
+  "consumes": {
+    "power": 10.0,
+    "liquids": [
+      {
+        "liquid": "amplified-energy",
+        "amount": 0.125,
+        "update": true,      
+        "booster": false
+      },
+      {
+        "liquid": "water",
+        "amount": 0.15,
+        "update": false,
+        "booster": true,     
+        "optional": true     
+      }
+    ]
+  },
+
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      { "type": "DrawRegion", "suffix": "-bottom" },
+      {
+        "type": "DrawLiquidRegion", 
+        "liquid": "amplified-energy"
+      },
+      { "type": "DrawDefault" },                     
+      { "type": "DrawRegion", "suffix": "-top" }     
+    ]
+  },
+
+  "requirements": [
+    { "item": "silicon", "amount": 3500 },
+    { "item": "thorium", "amount": 2500 },
+    { "item": "plastanium", "amount": 1500 },
+    { "item": "surge-alloy", "amount": 800 }
+  ],
+  "category": "production"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "router",
+  "name": "Electrothermal-Router",
+  "health": 280,
+  "size": 1,
+  "speed": 15.0,
+  "itemCapacity": 30,
+  "hasPower": true,
+  "conductivePower": true,
+  "consumes": {
+    "power": 0.15
+  },
+  "requirements": [
+    { "item": "Electrothermic-alloy", "amount": 2 },
+    { "item": "Carbon", "amount": 4 },
+    { "item": "Aluminium", "amount": 4 }
+  ],
+  "category": "distribution",
+  "research": "electrothermal-junction",
+  "updateEffect": "electricCharge",
+  "idleSound": "electricbuzz",
+  "idleSoundVolume": 0.2
+}

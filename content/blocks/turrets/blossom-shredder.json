@@ -1,0 +1,135 @@
+{
+  "type": "itemTurret",
+  "name": "Blossom-shredder",
+  "description": "Bio-shotgun turret that fires petal munitions. Load graphite, thorium or phase-fabric to change behavior.",
+  "size": 2,
+  "health": 920,
+  "reload": 34,
+  "range": 175,
+  "recoil": 1.5,
+  "rotateSpeed": 7,
+  "inaccuracy": 1,
+  "targetAir": true,
+  "targetGround": true,
+
+  "category": "turret",
+  "research": "salvo",
+  "consumePower": 4,
+
+  "requirements": [
+    { "item": "Bio-mass", "amount": 90 },
+    { "item": "silicon", "amount": 60 },
+    { "item": "titanium", "amount": 80 },
+    { "item": "metaglass", "amount": 45 }
+  ],
+
+  "shoot": {
+    "type": "ShootSpread",
+    "shots": 9,
+    "spread": 6
+  },
+
+  "shootEffect": {
+    "type": "particleEffect",
+    "particles": 14,
+    "length": 20,
+    "sizeFrom": 4,
+    "sizeTo": 0,
+    "colorFrom": "ffd97b",
+    "colorTo": "ffffff",
+    "cone": 25,
+    "lifetime": 28
+  },
+
+  "ammoTypes": {
+    "graphite": {
+      "type": "BasicBulletType",
+      "damage": 18,
+      "speed": 5,
+      "lifetime": 32,
+      "width": 8,
+      "height": 11,
+      "frontColor": "80d4ff",
+      "backColor": "3399ff",
+      "trailColor": "b3e6ff",
+      "trailLength": 6,
+      "hitEffect": "explosion",
+      "fragBullets": 4,
+      "fragRandomSpread": 6,
+      "fragSpread": 18,
+      "fragBullet": {
+        "type": "BasicBulletType",
+        "damage": 8,
+        "speed": 4,
+        "lifetime": 24,
+        "width": 5,
+        "height": 6,
+        "frontColor": "b3e6ff",
+        "backColor": "66c2ff",
+        "trailLength": 5,
+        "hitEffect": "hitBulletSmall"
+      }
+    },
+
+    "thorium": {
+      "type": "BasicBulletType",
+      "damage": 20,
+      "speed": 4.8,
+      "lifetime": 40,
+      "width": 10,
+      "height": 14,
+      "frontColor": "ff66cc",
+      "backColor": "ff1a8c",
+      "trailColor": "ff9adf",
+      "trailLength": 8,
+      "hitEffect": "explosion",
+      "pierce": true,
+      "pierceCap": 3,
+      "splashDamage": 24,
+      "splashDamageRadius": 20,
+      "status": "burning",
+      "statusDuration": 300
+    },
+
+    "phase-fabric": {
+      "type": "BasicBulletType",
+      "damage": 22,
+      "speed": 6.0,
+      "lifetime": 34,
+      "width": 7,
+      "height": 10,
+      "frontColor": "ffe680",
+      "backColor": "ffc2e0",
+      "trailColor": "ffd8b8",
+      "trailLength": 6,
+      "hitEffect": "explosion",
+      "homingPower": 0.02,
+      "homingRange": 28,
+      "status": "corroded",
+      "statusDuration": 220,
+      "pierce": true,
+      "pierceCap": 2,
+      "fragBullets": 8,
+      "fragRandomSpread": 0,
+      "fragSpread": 45,
+      "fragVelocityMin": 0,
+      "fragVelocityMax": 0,
+      "fragBullet": {
+        "type": "BasicBulletType",
+        "damage": 9,
+        "speed": 9,
+        "lifetime": 18,
+        "width": 4,
+        "height": 4,
+        "frontColor": "ffd27f",
+        "backColor": "ff82ea",
+        "trailLength": 6,
+        "hitEffect": "hitBulletSmall"
+      }
+    }
+  },
+
+  "drawer": {
+    "type": "DrawTurret"
+  }
+}

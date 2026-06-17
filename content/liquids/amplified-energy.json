@@ -1,0 +1,15 @@
+{
+  "type": "Liquid",
+  "name": "amplified-energy",
+
+  "description": "A highly energized liquid created from slag, blast compound, and thorium. Extremely unstable but powerful.",
+
+  "color": "7a1f18",
+  "barColor": "7a1f18",
+  "lightColor": "ffd966aa",
+
+  "viscosity": 0.7,
+  "flammability": 0.2,
+  "temperature": 1.4,
+  "explosiveness": 0.6
+}
